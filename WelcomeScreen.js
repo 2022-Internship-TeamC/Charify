@@ -9,28 +9,15 @@ import { NavigationContainer } from '@react-navigation/native';
 const WelcomeScreen = ({navigation}) => {
     return (
     <SafeAreaView style={mainstyles.container}>
-      <View style = {mainstyles.basicbox}>
-        <Text style = {mainstyles.text}>Change</Text>
-        </View>
+        <Text style = {mainstyles.basicbox}>CHANGE</Text>
       <View style = {styles2.container}>
         <Text numberOfLines={2} style = 
           {{fontSize: 30, color: 'black', fontStyle: 'italic',}}>Convert your image into a character!</Text>
         
 
-        <View style = {styles2.jpgcontainer}>
           <Image source = {styles2.images}></Image> 
-          <Image source = {styles2.images}></Image>
-          <Image source = {styles2.images}></Image>
-        </View>
         <View style = {styles2.jpgcontainer}>
-          <Image source = {styles2.images}></Image> 
-          <Image source = {styles2.images}></Image>
-          <Image source = {styles2.images}></Image>
-        </View>
-        <View style = {styles2.jpgcontainer}>
-          <Image source = {styles2.images}></Image> 
-          <Image source = {styles2.images}></Image>
-          <Image source = {styles2.images}></Image>
+          <Image source = {styles2.images2}></Image> 
         </View>
 
         <View style={[{ width: "90%", height: "20%",}]}>
@@ -55,14 +42,12 @@ const mainstyles = StyleSheet.create({
     },
     basicbox: { //Change 상단바
       width: '100%',
-      height: '7%',
+      height: '10%',
       justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: 'rgb(240, 217, 215)'
-      
-    },
-    text: { //Change 상단바 텍스트
-      fontSize: 35,
+      textAlign: 'center',
+      backgroundColor: 'rgb(240, 217, 215)',
+
+      fontSize: 70,
       color: 'black',
       fontStyle: 'italic',
       fontWeight: 'bold',
@@ -87,15 +72,14 @@ const mainstyles = StyleSheet.create({
     },
   
     images: { //이미지
-        width: 150,
-        height: 150,
-        uri: "https://obj-sg.thewiki.kr/data/ebb2a8ebb2a8ebb2a82e6a7067.jpg"
-    },
+        width: 250,
+        height: 250,
+        uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBE5fpU_8YDS6exV3FqObEOAaOkZLbM5Bwsg&usqp=CAU" },
   
-    images2: { //이미지
-      width: 150,
-      height: 150,
-      uri : "http://img.sbs.co.kr/sbscnbc/upload/2014/02/13/10000414273.jpg"
+    images2: { //이미지=
+      width: 250,
+      height: 250,
+      uri : "https://www.mmlab-ntu.com/project/dualstylegan/img/example_c_s2.jpg"
   }
   });
   
