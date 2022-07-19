@@ -1,11 +1,13 @@
-import React from "react";
+import React , { useState } from "react";
 import { StyleSheet, Text, View,Image,SafeAreaView,Alert, Button } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
+
+
 
 const WelcomeDisney = ({navigation}) => {
     return (
         <SafeAreaView style ={styles.container}>
-                <Text style={styles.title}>CHANGE</Text>
+        <Text style={styles.title}>CHANGE</Text>
                 <View style = {styles.blankcontainer}></View>
 
                 <Image 
@@ -27,15 +29,37 @@ const WelcomeDisney = ({navigation}) => {
                     onPress={() => Alert.alert("SAVE", "Do you want to save your Disney image?",[
                             {text: "Cancel"},
                             {text: "Yes"},])}  /> 
+                            
                 </View>
                 <View style={[{ width: "90%", height: "10%",}]}>
                     <Button
-                    title="BACKGROUND"
+                    title="Feedback"
                     color="rgb(250, 209, 169)"
-                    onPress={() => navigation.navigate('WelcomeBackground')}  /> 
+                    onPress={() => navigation.navigate('Feedback')}  /> 
                 </View>
-
-        </SafeAreaView>);
+        </SafeAreaView>
+        
+          
+    /*    <NavigationContainer>
+ 
+    <Tab.Navigator>
+      <Tab.Screen
+        name="Feedback"
+        component={Feedback}
+        options={{
+          tabBarIcon:({color,size}) =>(
+            <Feather name="settings" color={color} size={size}/>)
+          }} />
+           </Tab.Navigator>
+    </NavigationContainer>*/
+        
+        
+        
+        
+        
+        
+        
+        );
     }
 
 
@@ -46,14 +70,14 @@ const WelcomeDisney = ({navigation}) => {
           backgroundColor: "rgb(252,233,212)",
           alignItems:"center",
           paddingBottom: 20,
-
+          
         },
-
+      
         title: {
             width: '100%',
             height: '10%',
             backgroundColor: 'rgb(240, 217, 215)',
-    
+
             color: "black",
             fontSize: 70,
             fontWeight: "bold",
@@ -65,15 +89,15 @@ const WelcomeDisney = ({navigation}) => {
           /*width: '0.5%',
           height: '0.5%',*/
           resizeMode: 'contain',
-
+        
           justifyContent: "center",
-
+      
         },
-        blankcontainer: {
-            width: '100%',
-            height: '10%',
-          },
+    blankcontainer: {
+        width: '100%',
+        height: '10%',
+      },
     });
 
-
+    
 export default WelcomeDisney;
