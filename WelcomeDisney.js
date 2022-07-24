@@ -1,12 +1,13 @@
 import React , { useState } from "react";
 import { StyleSheet, Text, View,Image,SafeAreaView,Alert, Button } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
-
+import { AntDesign } from '@expo/vector-icons';
 
 
 const WelcomeDisney = ({navigation}) => {
     return (
         <SafeAreaView style ={styles.container}>
+            
         <Text style={styles.title}>CHANGE</Text>
                 <View style = {styles.blankcontainer}></View>
 
@@ -15,8 +16,8 @@ const WelcomeDisney = ({navigation}) => {
                     source={{uri: 'https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA3MzBfMTk3%2FMDAxNjI3NjQyNTY3MTAy.p578liXfJCf9I-WONeqhWvM9JsOQlBzh4dmhBQGeW5Ag.XHvK7K3tC6it__YpW9V20rINJpsnMCKh-au1Zyqw6Ikg.JPEG.jojo9344%2Ffrozen%25A3%25AD20200901%25A3%25AD193057%25A3%25AD009.jpg&type=a340'}}
                     style={{
                     resizeMode: "contain",
-                    height: 450,
-                    width: 350
+                    height: 300,
+                    width: 700,
                     }}
 
                     />
@@ -25,36 +26,23 @@ const WelcomeDisney = ({navigation}) => {
                 <View style={[{ width: "90%", height: "10%",}]}>
                     <Button
                     title="SAVE"
-                    color="rgb(250, 209, 169)"
+                    color="black"
                     onPress={() => Alert.alert("SAVE", "Do you want to save your Disney image?",[
                             {text: "Cancel"},
                             {text: "Yes"},])}  /> 
                             
                 </View>
-                <View style={[{ width: "90%", height: "10%",}]}>
-                    <Button
-                    title="Feedback"
-                    color="rgb(250, 209, 169)"
-                    onPress={() => navigation.navigate('Feedback')}  /> 
+                <View style={[{ width:50, height:50, position:"absolute", top:80,right:8,}]}>
+                    
+
+                <AntDesign name="setting" size={40} color="black"   onPress={() => navigation.navigate('Setting')}  /> 
                 </View>
+        
+                
         </SafeAreaView>
+
         
-          
-    /*    <NavigationContainer>
- 
-    <Tab.Navigator>
-      <Tab.Screen
-        name="Feedback"
-        component={Feedback}
-        options={{
-          tabBarIcon:({color,size}) =>(
-            <Feather name="settings" color={color} size={size}/>)
-          }} />
-           </Tab.Navigator>
-    </NavigationContainer>*/
-        
-        
-        
+  
         
         
         
@@ -99,5 +87,5 @@ const WelcomeDisney = ({navigation}) => {
       },
     });
 
-    
+  
 export default WelcomeDisney;
