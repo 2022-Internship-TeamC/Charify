@@ -8,6 +8,7 @@ import WelcomeBackground from './app/screens/WelcomeBackground';
 
 import Feedback from './app/screens/Feedback';
 import AboutUs from './app/screens/AboutUs';
+import Setting from './app/screens/Setting';
 
 
 import { NavigationContainer } from '@react-navigation/native';
@@ -21,22 +22,28 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="WelcomeScreen" component={WelcomeScreen}/>
+      <Stack.Navigator initialRouteName="WelcomeScreen">
+        
+        
+
+  
+
+        <Stack.Screen name="Welcomescreen" component={WelcomeScreen} />
         <Stack.Screen name="PickCharacter" component={PickCharacter} />
-        <Stack.Screen name="WelcomeFace" component={WelcomeFace}/>
+        <Stack.Screen name="WelcomeFace" component={WelcomeFace} />
+        
         <Stack.Screen name="WelcomeDisney" component={WelcomeDisney}/>
         <Stack.Screen name="WelcomeBackground" component={WelcomeBackground}/>
-
-      
      
      
         <Stack.Screen name="Feedback" component={Feedback}/>
         
         <Stack.Screen name="AboutUs" component={AboutUs}/>
-       
+      
+        <Stack.Screen name="Setting" component={Setting}/>
+      
     
-    
+        
         
   
     </Stack.Navigator>
