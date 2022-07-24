@@ -6,18 +6,17 @@ from 'react-native';
 import PickCharacter from './PickCharacter';
 import { NavigationContainer } from '@react-navigation/native';
 
+
 const WelcomeScreen = ({navigation}) => {
     return (
     <SafeAreaView style={mainstyles.container}>
-        <Text style = {mainstyles.basicbox}>CHANGE</Text>
+       <Text style = {mainstyles.basicbox}>CHANGE</Text>
       <View style = {styles2.container}>
         <Text numberOfLines={2} style = 
           {{fontSize: 30, color: 'black', fontStyle: 'italic',}}>Convert your image into a character!</Text>
-        
-
-          <Image source = {styles2.images}></Image> 
-        <View style = {styles2.jpgcontainer}>
-          <Image source = {styles2.images2}></Image> 
+             <Image source = {styles2.images}></Image> 
+             <View style = {styles2.jpgcontainer}>
+             <Image source = {styles2.images2}></Image> 
         </View>
 
         <View style={[{ width: "90%", height: "20%",}]}>
@@ -70,16 +69,14 @@ const mainstyles = StyleSheet.create({
       paddingVertical: '5%',
       marginBottom: '5%',
     },
-  
+
     images: { //이미지
-        width: 250,
-        height: 250,
-        uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBE5fpU_8YDS6exV3FqObEOAaOkZLbM5Bwsg&usqp=CAU" },
-  
-    images2: { //이미지=
       width: 250,
       height: 250,
-      uri : "https://www.mmlab-ntu.com/project/dualstylegan/img/example_c_s2.jpg"
-  }
-  });
-  
+      uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBE5fpU_8YDS6exV3FqObEOAaOkZLbM5Bwsg&usqp=CAU" },
+      images2: { //이미지=
+        width: 250,
+        height: 250,
+        uri : "https://www.mmlab-ntu.com/project/dualstylegan/img/example_c_s2.jpg"
+    }
+    });
